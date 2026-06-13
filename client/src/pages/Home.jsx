@@ -14,7 +14,7 @@ const Home = () => {
         }, 400); // 400ms debounce
         return () => clearTimeout(timeoutId);
     }, [search]);
-
+    
     const fetchEvents = async () => {
         try {
             const { data } = await api.get(`/events?search=${search}`);
